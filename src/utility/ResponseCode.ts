@@ -1,0 +1,29 @@
+enum ResponseCode {
+  // Success
+  OK = 200,
+  CREATED = 201,
+  ACCEPTED = 202,
+  NO_CONTENT = 204,
+  RESET_CONTENT = 205,
+
+  // Redirection
+  MULTIPLE_CHOICES = 300,
+  MOVED_PERMANENTLY = 301,
+  NOT_MODIFIED = 304,
+
+  // Client Error
+  BAD_REQUEST = 400,
+  UNAUTHORIZED = 401,
+  FORBIDDEN = 403,
+  NOT_FOUND = 404,
+  CONFLICT = 409,
+  TOO_MANY_REQUESTS = 429,
+
+  // Server error
+  INTERNAL_SERVER_ERROR = 500,
+  NOT_IMPLEMENTED = 501,
+  BAD_GATEWAY = 502,
+  SERVICE_UNAVAILABLE = 503
+}
+
+export default ResponseCode
