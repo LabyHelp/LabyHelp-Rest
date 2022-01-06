@@ -2,15 +2,12 @@ import {NestFactory} from '@nestjs/core';
 import {AppModule} from './app.module';
 import {DocumentBuilder, SwaggerModule} from '@nestjs/swagger';
 import {NestExpressApplication} from "@nestjs/platform-express";
-import * as cookieParser from 'cookie-parser';
 import {Logger} from "@nestjs/common";
 
 const logger = new Logger('main');
 
 async function bootstrap() {
     const app = await NestFactory.create<NestExpressApplication>(AppModule);
-
-    app.use(cookieParser());
 
     // SERVE Swagger docs
     const config = new DocumentBuilder()

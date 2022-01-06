@@ -11,8 +11,6 @@ export class Token {
     token: any;
     @Prop({type: String})
     client_type: any;
-    @Prop({type: String})
-    scope: any;
     @Prop({type: Object})
     refresh_tokens: any
 }
